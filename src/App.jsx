@@ -57,7 +57,7 @@ const App = () => {
       } min-h-screen p-6 transition-colors duration-300`}
     >
       <div className='flex justify-between items-center mb-6'>
-        <h1 className='text-3xl font-bold lg:text-center'>Profile Directory</h1>
+        <h1 className='text-2xl font-bold lg:text-center text-3xl'>Profile Directory</h1>
         <button
           onClick={() => setDarkMode(!darkMode)}
           className={`${
