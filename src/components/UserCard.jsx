@@ -14,7 +14,13 @@ const UserCard = ({ user, darkMode }) => {
       <p><strong>Email:</strong> {user.email}</p>
       <p><strong>Company:</strong> {user.company.name}</p>
       <p><strong>City:</strong> {user.address.city}</p>
-
+      {showDetails && (
+        <div className="mt-3 text-sm text-gray-600">
+          <p><strong>Username:</strong> {user.username}</p>
+          <p><strong>Phone:</strong> {user.phone}</p>
+          <p><strong>Website:</strong> {user.website}</p>
+        </div>
+      )}
       <button
         onClick={() => setShowDetails(!showDetails)}
         className={`${
@@ -26,13 +32,7 @@ const UserCard = ({ user, darkMode }) => {
         {showDetails ? 'Hide Details' : 'View More'}
       </button>
 
-      {showDetails && (
-        <div className="mt-3 text-sm text-gray-600">
-          <p><strong>Username:</strong> {user.username}</p>
-          <p><strong>Phone:</strong> {user.phone}</p>
-          <p><strong>Website:</strong> {user.website}</p>
-        </div>
-      )}
+
     </div>
   );
 };
